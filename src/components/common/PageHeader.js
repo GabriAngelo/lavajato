@@ -1,0 +1,18 @@
+function PageHeader({ title, description, actionLabel, onAction }) {
+  return (
+    <div className="page-header">
+      <div>
+        <span className="section-tag">Modulo</span>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+      {actionLabel ? (
+        <button type="button" className="primary-button" onClick={onAction}>
+          {actionLabel}
+        </button>
+      ) : null}
+    </div>
+  );
+}
+
+export default PageHeader;
